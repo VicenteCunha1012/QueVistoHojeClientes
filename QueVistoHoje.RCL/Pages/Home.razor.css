@@ -1,0 +1,46 @@
+.carousel-container {
+    position: relative;
+    width: 500px; /* Adjust size according to your images */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-image {
+    width: 500px; /* Match the container width */
+    height: 300px; /* Adjust the height */
+    object-fit: cover; /* Make sure images don't distort */
+    border: 5px solid #ccc; /* Add a light gray border */
+    border-radius: 10px; /* Optional: makes the corners rounded */
+}
+
+/* Style for carousel buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+    .carousel-button.prev {
+        left: 0;
+    }
+
+    .carousel-button.next {
+        right: 0;
+    }
+
+    /* Add hover effect to buttons */
+    .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }

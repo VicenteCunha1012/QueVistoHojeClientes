@@ -1,7 +1,52 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<div class="carousel-container">
+    <button class="carousel-button prev" @onclick="ShowPreviousImage" disabled="@IsSingleImage">❮</button>
 
-<h1>Hello, world!</h1>
+    <div class="carousel-images" style="transform: translateX(@(-currentIndex * 100)%)">
+        @foreach (var image in Images)
+        {
+            <img src="@image" class="carousel-image" />
+        }
+    </div>
 
-Welcome to your new app.
+    <button class="carousel-button next" @onclick="ShowNextImage" disabled="@IsSingleImage">❯</button>
+</div>
+
+@code {
+    private List<string> Images = new List<string>
+    {
+        "https://th.bing.com/th/id/OIP.0mZCNVv136nPUJOf_PlAyAAAAA?rs=1&pid=ImgDetMain",
+        "https://th.bing.com/th/id/OIP.JS_6825SsmWzzRWsTfKhhgHaLH?rs=1&pid=ImgDetMain",
+        "https://m.media-amazon.com/images/I/71WaJVWx0vS._AC_UL1500_.jpg",
+        "https://th.bing.com/th/id/R.32ae514b1bf131859cefc4df91b3edef?rik=oPMjXUKkopE%2fgw&riu=http%3a%2f%2fghk.h-cdn.co%2fassets%2f17%2f37%2f1505507422-llbean-ultrawarm-coat.jpg&ehk=9Mm93cTDdLYRuDhMhUVohiwxRaKj2yAaf%2fi0TPe58%2fE%3d&risl=&pid=ImgRaw&r=0"
+    };
+
+    private int currentIndex = 0;
+
+    private bool IsSingleImage => Images.Count <= 1;
+
+    private void ShowNextImage()
+    {
+        if (currentIndex < Images.Count - 1)
+        {
+            currentIndex++;
+        }
+        else
+        {
+            currentIndex = 0; 
+        }
+    }
+
+    private void ShowPreviousImage()
+    {
+        if (currentIndex > 0)
+        {
+            currentIndex--;
+        }
+        else
+        {
+            currentIndex = Images.Count - 1;
+        }
+    }
+}
