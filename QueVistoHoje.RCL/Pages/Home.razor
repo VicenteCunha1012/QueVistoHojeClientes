@@ -1,12 +1,18 @@
 ﻿@page "/"
 
+@using QueVistoHoje.Data.Entities
+@inject HttpClient Http
+
 <div class="carousel-container">
     <button class="carousel-button prev" @onclick="ShowPreviousImage" disabled="@IsSingleImage">❮</button>
 
     <div class="carousel-images" style="transform: translateX(@(-currentIndex * 100)%)">
-        @foreach (var image in Images)
+        @foreach (var produto in produtos)
         {
-            <img src="@image" class="carousel-image" />
+            <img src="@produto.Imagem" class="carousel-image" />
+            <div class="carousel-caption">
+                @produto.Nome
+            </div>
         }
     </div>
 
@@ -14,27 +20,31 @@
 </div>
 
 @code {
-    private List<string> Images = new List<string>
-    {
-        "https://th.bing.com/th/id/OIP.0mZCNVv136nPUJOf_PlAyAAAAA?rs=1&pid=ImgDetMain",
-        "https://th.bing.com/th/id/OIP.JS_6825SsmWzzRWsTfKhhgHaLH?rs=1&pid=ImgDetMain",
-        "https://m.media-amazon.com/images/I/71WaJVWx0vS._AC_UL1500_.jpg",
-        "https://th.bing.com/th/id/R.32ae514b1bf131859cefc4df91b3edef?rik=oPMjXUKkopE%2fgw&riu=http%3a%2f%2fghk.h-cdn.co%2fassets%2f17%2f37%2f1505507422-llbean-ultrawarm-coat.jpg&ehk=9Mm93cTDdLYRuDhMhUVohiwxRaKj2yAaf%2fi0TPe58%2fE%3d&risl=&pid=ImgRaw&r=0"
-    };
-
+    private List<Produto> produtos = new List<Produto>();
     private int currentIndex = 0;
+    private bool IsSingleImage => produtos.Count <= 1;
 
-    private bool IsSingleImage => Images.Count <= 1;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://2jfs3w0w-7119.uks1.devtunnels.ms/api/produtos/");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching produtos: {ex.Message}");
+        }
+    }
 
     private void ShowNextImage()
     {
-        if (currentIndex < Images.Count - 1)
+        if (currentIndex < produtos.Count - 1)
         {
             currentIndex++;
         }
         else
         {
-            currentIndex = 0; 
+            currentIndex = 0;
         }
     }
 
@@ -46,7 +56,7 @@
         }
         else
         {
-            currentIndex = Images.Count - 1;
+            currentIndex = produtos.Count - 1;
         }
     }
 }
