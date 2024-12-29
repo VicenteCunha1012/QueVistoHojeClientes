@@ -1,0 +1,51 @@
+@page "/search"
+
+@using QueVistoHoje.Data.Entities
+@inject HttpClient Http
+
+<div class="search-container">
+    <input type="text" class="search-bar" @bind="searchQuery" placeholder="Search...">
+    <button class="search-button" @onclick="SearchProducts">Search</button>
+</div>
+
+<div class="product-grid">
+    @if (produtos != null && produtos.Count > 0)
+    {
+        @foreach (var produto in produtos)
+        {
+            <div class="product">
+                <img src="@produto.Imagem" class="product-image" />
+                <div class="product-info">
+                    <div class="product-value">@produto.Preco €</div>
+                    <div class="product-name">@produto.Nome</div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No products found.</p>
+    }
+</div>
+
+@code {
+    private string searchQuery = string.Empty;
+    private List<Produto> produtos = new List<Produto>();
+
+    // Method to search for products based on the query
+    private async Task SearchProducts()
+    {
+        if (!string.IsNullOrEmpty(searchQuery))
+        {
+            try
+            {
+                var searchUrl = $"https://2jfs3w0w-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
+                produtos = await Http.GetFromJsonAsync<List<Produto>>(searchUrl);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching produtos: {ex.Message}");
+            }
+        }
+    }
+}

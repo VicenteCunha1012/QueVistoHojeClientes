@@ -1,3 +1,28 @@
+
+.title-container {
+    width: 100%;
+    align-content: center;
+    margin-bottom: 5px;
+}
+
+.carousel-title {
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 99%); /* Gradient border */
+    margin-left: 50%;
+}
+
+    .carousel-title h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: white; /* You can adjust the color as needed */
+        letter-spacing: 1px;
+        padding: 10px;
+        text-align: center;
+    }
+
 .carousel-container {
     position: relative;
     width: 100%; /* Adjust size according to your needs */
