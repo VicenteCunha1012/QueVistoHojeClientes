@@ -1,24 +1,76 @@
 .carousel-container {
     position: relative;
-    width: 500px; /* Adjust size according to your images */
+    width: 100%; /* Adjust size according to your needs */
     overflow: hidden;
     margin: 0 auto;
 }
 
-.carousel-images {
+.carousel {
     display: flex;
     transition: transform 1s ease-in-out;
+    width: 100%;
+    will-change: transform;
+}
+
+.carousel-item {
+    flex: 0 0 33%; /* Each item takes up 1/3 of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    margin: 0;
+    overflow: hidden; /* Prevents overflow in case of padding/margins */
+    height: 500px; /* Set a fixed height or use percentage based on the container's height */
+    /* Gradient border */
+    border: 10px solid transparent; /* Make the actual border transparent */
+    background-color: white; /* Background color of the item */
+    border-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%) 1; /* Gradient border */
 }
 
 .carousel-image {
-    width: 500px; /* Match the container width */
-    height: 300px; /* Adjust the height */
-    object-fit: cover; /* Make sure images don't distort */
-    border: 5px solid #ccc; /* Add a light gray border */
-    border-radius: 10px; /* Optional: makes the corners rounded */
+    position: absolute;
+    width: 100%; /* The image will take up 100% of the width of the item */
+    height: 100%; /* The image will take up 100% of the height of the item */
+    object-fit: contain; /* Ensures the image fits within the container without cutting off any part */
 }
 
-/* Style for carousel buttons */
+
+.carousel-info {
+    position: absolute; /* Positioning relative to .carousel-item */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box; /* Include padding within the height/width of the item */
+}
+
+.product-value {
+    position: absolute;
+    top: 10px; /* Position the value at the top */
+    right: 10px; /* Position it at the right */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 99%); /* Gradient border */
+    width: fit-content;
+}
+
+.product-name {
+    position: absolute;
+    bottom: 10px; /* Position the name at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center it properly */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 99%); /* Gradient border */
+    width: fit-content;
+}
+
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -33,11 +85,11 @@
 }
 
     .carousel-button.prev {
-        left: 0;
+        left: 10px;
     }
 
     .carousel-button.next {
-        right: 0;
+        right: 10px;
     }
 
     /* Add hover effect to buttons */
