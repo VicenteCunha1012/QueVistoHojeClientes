@@ -13,18 +13,17 @@
     {
         @foreach (var produto in produtos)
         {
-            <div class="product">
-                <img src="@produto.Imagem" class="product-image" />
-                <div class="product-info">
-                    <div class="product-value">@produto.Preco €</div>
-                    <div class="product-name">@produto.Nome</div>
+            <a href="product/@produto.Id" class="product-link">
+                <div class="product">
+                    <img src="@produto.Imagem" class="product-image" />
+                    <div class="product-info">
+                        <div class="product-value">@produto.Preco €</div>
+                        <div class="product-name">@produto.Nome</div>
+                    </div>
                 </div>
-            </div>
+            </a>
+
         }
-    }
-    else
-    {
-        <p>No products found.</p>
     }
 </div>
 
@@ -32,14 +31,13 @@
     private string searchQuery = string.Empty;
     private List<Produto> produtos = new List<Produto>();
 
-    // Method to search for products based on the query
     private async Task SearchProducts()
     {
         if (!string.IsNullOrEmpty(searchQuery))
         {
             try
             {
-                var searchUrl = $"https://2jfs3w0w-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
+                var searchUrl = $"https://xfwd3lsv-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
                 produtos = await Http.GetFromJsonAsync<List<Produto>>(searchUrl);
             }
             catch (Exception ex)

@@ -9,7 +9,7 @@ builder.Services.AddRazorComponents()
 
 // Register HttpClient for dependency injection
 builder.Services.AddScoped<HttpClient>(sp =>
-    new HttpClient { BaseAddress = new Uri("https://2jfs3w0w-7119.uks1.devtunnels.ms") });
+    new HttpClient { BaseAddress = new Uri("https://xfwd3lsv-7119.uks1.devtunnels.ms/swagger/index.html") });
 
 var app = builder.Build();
 

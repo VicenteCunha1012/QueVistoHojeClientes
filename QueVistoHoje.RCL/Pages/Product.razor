@@ -1,0 +1,31 @@
+@page "/product/{id:int}"
+
+@using QueVistoHoje.Data.Entities
+@inject HttpClient Http
+
+
+@if (product == null)
+{
+    <p>Loading product details...</p>
+}
+else
+{
+    <div class="product-details">
+        <img src="@product.Imagem" alt="@product.Nome" class="product-image" />
+        <h2>@product.Nome</h2>
+        <p>Price: @product.Preco €</p>
+        <p>Description: @product.Descricao</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Produto? product;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await Http.GetFromJsonAsync<Produto>($"https://xfwd3lsv-7119.uks1.devtunnels.ms/api/produtos/{Id}");
+    }
+}

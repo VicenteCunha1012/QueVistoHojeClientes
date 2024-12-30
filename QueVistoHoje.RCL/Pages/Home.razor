@@ -9,25 +9,28 @@
     </div>
 </div>
 
+@if (produtos == null) {
+    <p>A carregar sugestões</p>
+} else {
+    <div class="carousel-container">
+        <button class="carousel-button prev" @onclick="ShowPreviousImage" disabled="@IsSingleImage">❮</button>
 
-<div class="carousel-container">
-    <button class="carousel-button prev" @onclick="ShowPreviousImage" disabled="@IsSingleImage">❮</button>
-
-    <div class="carousel" style="transform: translateX(@(-currentIndex * 100)%)">
-        @foreach (var produto in produtos)
-        {
-            <div class="carousel-item">
-                <img src="@produto.Imagem" class="carousel-image" />
-                <div class="carousel-info">
-                    <div class="product-value">@produto.Preco €</div>
-                    <div class="product-name">@produto.Nome</div>
+        <div class="carousel" style="transform: translateX(@(-currentIndex * 100)%)">
+            @foreach (var produto in produtos)
+            {
+                <div class="carousel-item">
+                    <img src="@produto.Imagem" class="carousel-image" />
+                    <div class="carousel-info" onclick="window.location.href='product/@produto.Id'">
+                        <div class="product-value">@produto.Preco €</div>
+                        <div class="product-name">@produto.Nome</div>
+                    </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
 
-    <button class="carousel-button next" @onclick="ShowNextImage" disabled="@IsSingleImage">❯</button>
-</div>
+        <button class="carousel-button next" @onclick="ShowNextImage" disabled="@IsSingleImage">❯</button>
+    </div>
+}
 
 @code {
     private List<Produto> produtos = new List<Produto>();
@@ -38,7 +41,7 @@
     {
         try
         {
-            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://2jfs3w0w-7119.uks1.devtunnels.ms/api/produtos/");
+            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://xfwd3lsv-7119.uks1.devtunnels.ms/api/produtos/");
         }
         catch (Exception ex)
         {
@@ -54,7 +57,7 @@
         }
         else
         {
-            currentIndex = 0;  // Loop back to the first item
+            currentIndex = 0;
         }
     }
 
@@ -66,7 +69,7 @@
         }
         else
         {
-            currentIndex = produtos.Count - 1;  // Loop back to the last item
+            currentIndex = produtos.Count - 1;
         }
     }
 }
