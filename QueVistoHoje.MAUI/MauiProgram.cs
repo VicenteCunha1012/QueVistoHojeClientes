@@ -15,10 +15,11 @@ namespace QueVistoHoje.MAUI
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddHttpClient();
 
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
-    		builder.Logging.AddDebug();
+            builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
