@@ -2,8 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace QueVistoHoje.Data.Entities
-{
+namespace QueVistoHoje.RCL.Data.Entities {
     public class EncomendaProduto
     {
         [Key]

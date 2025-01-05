@@ -6,8 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-namespace QueVistoHoje.Data.Entities
-{
+namespace QueVistoHoje.RCL.Data.Entities {
     public class Encomenda
     {
         public int Id { get; set; }
@@ -20,7 +19,6 @@ namespace QueVistoHoje.Data.Entities
         public EncomendaState Estado { get; set; }
         public string EnderecoEntrega { get; set; }
         public decimal PrecoTotal { get; set; }
-       // public ApplicationUser Cliente { get; set; }
 
         public List<EncomendaProduto> EncomendaProdutos { get; set; } = new();
 

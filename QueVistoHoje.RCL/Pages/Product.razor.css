@@ -1,0 +1,81 @@
+.product-details-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-details {
+    display: flex;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.image-section {
+    flex: 1;
+}
+
+.product-detail-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-detail-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-detail-price, .product-detail-stock, .product-detail-company {
+    font-size: 18px;
+    color: #555;
+}
+
+    .product-detail-stock span {
+        color: #28a745;
+        font-weight: bold;
+    }
+
+.product-detail-description {
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+.action-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .action-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+span.red {
+    color: red;
+}
+
+.description-box {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    overflow-y: auto;
+    max-height: 150px; /* Optional: Limit height and enable scroll if content overflows */
+    margin-top: 5px;
+}

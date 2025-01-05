@@ -1,31 +1,91 @@
 @page "/product/{id:int}"
 
-@using QueVistoHoje.Data.Entities
+@using QueVistoHoje.RCL.Data
+@using QueVistoHoje.RCL.Data.Entities
+
 @inject HttpClient Http
+@inject NavigationManager Navigation
+@inject UserService UserService
 
+<div class="product-details-container">
+    @if (product == null)
+    {
+        <p class="loading-text">Loading product details...</p>
+    }
+    else
+    {
+        <div class="product-details">
+            <div class="image-section">
+                <img src="@product.Imagem" alt="@product.Nome" class="product-detail-image" />
+            </div>
+            <div class="info-section">
+                <h1 class="product-detail-name">@product.Nome</h1>
 
-@if (product == null)
-{
-    <p>Loading product details...</p>
-}
-else
-{
-    <div class="product-details">
-        <img src="@product.Imagem" alt="@product.Nome" class="product-image" />
-        <h2>@product.Nome</h2>
-        <p>Price: @product.Preco €</p>
-        <p>Description: @product.Descricao</p>
-    </div>
-}
+                <p class="product-detail-price">
+                    <strong>Preço:</strong>
+                    <span>@product.Preco €</span>
+                </p>
+
+                <p class="product-detail-stock">
+                    <strong>Stock: </strong>
+                    @if (product.Stock <= 0) {
+                        <span class="red">Indisponível</span>
+                    } else if (product.Stock == 1) {
+                        <span>@(product.Stock) Disponível</span>
+                    } else {
+                        <span>@(product.Stock) Disponíveis</span>
+                    }
+                </p>
+
+                <p class="product-detail-company">
+                    <strong>Empresa: </strong>
+                    <span>@(empresa.Nome)</span>
+                </p>
+
+                <p class="product-detail-description">
+                    <strong>Descrição:</strong>
+                    <div class="description-box">
+                        @product.Descricao
+                    </div>
+                </p>
+
+                <button class="action-button" @onclick="AddToCart">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    }
+</div>
 
 @code {
     [Parameter]
     public int Id { get; set; }
 
     private Produto? product;
+    private Empresa? empresa;
 
     protected override async Task OnInitializedAsync()
     {
-        product = await Http.GetFromJsonAsync<Produto>($"https://1vpgh2vw-7119.uks1.devtunnels.ms/api/produtos/{Id}");
+        try
+        {
+            product = await Http.GetFromJsonAsync<Produto>($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/{Id}");
+            empresa = await Http.GetFromJsonAsync<Empresa>($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/empresas/{product.EmpresaId}");
+
+            Console.WriteLine($"Product Empresa Name:" + product.Empresa.Nome);
+
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching product: {ex.Message}");
+        }
+    }
+
+    private void AddToCart()
+    {
+        if (string.IsNullOrEmpty(UserService.Token.ToString()))
+        {
+            Navigation.NavigateTo("/login");
+        }
+
+        UserService.AddToCarrinho(product);
     }
 }

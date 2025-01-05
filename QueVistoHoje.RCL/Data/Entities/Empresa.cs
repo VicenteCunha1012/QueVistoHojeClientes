@@ -1,5 +1,4 @@
-﻿namespace QueVistoHoje.Data.Entities
-{
+﻿namespace QueVistoHoje.RCL.Data.Entities {
     public class Empresa
     {
         public int Id { get; set; }

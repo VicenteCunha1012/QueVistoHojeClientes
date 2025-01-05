@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueVistoHoje.Data.Entities
-{
+namespace QueVistoHoje.RCL.Data.Entities {
     public class Produto
     {
         public int Id { get; set; }

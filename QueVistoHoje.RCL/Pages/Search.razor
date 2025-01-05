@@ -1,6 +1,6 @@
 @page "/search"
 
-@using QueVistoHoje.Data.Entities
+@using QueVistoHoje.RCL.Data.Entities
 @inject HttpClient Http
 
 <div class="search-container">
@@ -22,7 +22,6 @@
                     </div>
                 </div>
             </a>
-
         }
     }
 </div>
@@ -37,7 +36,7 @@
         {
             try
             {
-                var searchUrl = $"https://1vpgh2vw-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
+                var searchUrl = $"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
                 produtos = await Http.GetFromJsonAsync<List<Produto>>(searchUrl);
             }
             catch (Exception ex)

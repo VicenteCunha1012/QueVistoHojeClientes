@@ -1,0 +1,65 @@
+@page "/carrinho"
+
+@using QueVistoHoje.RCL.Data
+@using QueVistoHoje.RCL.Data.Entities
+@inject UserService UserService
+@inject NavigationManager Navigation
+
+@if (string.IsNullOrEmpty(UserService.Token.ToString())) {
+    Navigation.NavigateTo("/");
+}
+
+
+<div class="cart-header-container">
+    <div class="cart-header">
+        <h1>Seu Carrinho</h1>
+    </div>
+</div>
+
+<div class="product-grid">
+    @if (UserService.Carrinho != null && UserService.Carrinho.Count > 0)
+    {
+        @foreach (var produto in UserService.Carrinho)
+        {
+            <a href="product/@produto.Id" class="product-link">
+                <div class="product">
+                    <img src="@produto.Imagem" class="product-image" />
+                    <div class="product-info">
+                        <div class="product-value">@produto.Preco €</div>
+                        <div class="product-name">@produto.Nome</div>
+                        <button class="remove-button" @onclick="() => RemoveFromCart(produto.Id)">Remover</button>
+                    </div>
+                </div>
+            </a>
+        }
+    }
+    else
+    {
+        <div class="empty-cart-message">
+            <p>O carrinho está vazio. Adicione alguns produtos!</p>
+        </div>
+    }
+</div>
+
+<div class="checkout-container">
+    <button class="checkout-button" @onclick="Checkout">Finalizar Compra</button>
+</div>
+
+@code {
+    private void RemoveFromCart(int produtoId)
+    {
+        var produtoToRemove = UserService.Carrinho.FirstOrDefault(p => p.Id == produtoId);
+        if (produtoToRemove != null)
+        {
+            UserService.Carrinho.Remove(produtoToRemove);
+            Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+        }
+    }
+
+    private void Checkout()
+    {
+        // Redirect to a checkout page or handle checkout logic
+        Navigation.NavigateTo("/checkout");
+    }
+}
+

@@ -1,5 +1,7 @@
 using System.Net.Http; // Ensure this is included
+
 using QueVistoHoje.Blazor.Components;
+using QueVistoHoje.RCL.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,9 @@ builder.Services.AddRazorComponents()
 
 // Register HttpClient for dependency injection
 builder.Services.AddScoped<HttpClient>(sp =>
-    new HttpClient { BaseAddress = new Uri("https://1vpgh2vw-7119.uks1.devtunnels.ms/swagger/index.html") });
+    new HttpClient { BaseAddress = new Uri("https://d3q8hwmm-7119.uks1.devtunnels.ms") });
+
+builder.Services.AddSingleton<UserService>();
 
 var app = builder.Build();
 

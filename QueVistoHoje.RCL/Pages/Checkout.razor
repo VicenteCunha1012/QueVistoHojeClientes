@@ -1,0 +1,12 @@
+@page "/checkout"
+
+@using QueVistoHoje.RCL.Data
+@using QueVistoHoje.RCL.Data.Entities
+
+@inject NavigationManager Navigation
+@inject UserService UserService
+
+@if (string.IsNullOrEmpty(UserService.Token.ToString()))
+{
+    Navigation.NavigateTo("/");
+}

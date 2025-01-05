@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-@using QueVistoHoje.Data.Entities
+@using QueVistoHoje.RCL.Data.Entities
 @inject HttpClient Http
 
 <div class="title-container">
@@ -41,7 +41,7 @@
     {
         try
         {
-            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://1vpgh2vw-7119.uks1.devtunnels.ms/api/produtos/");
+            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/");
         }
         catch (Exception ex)
         {

@@ -1,6 +1,12 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@using QueVistoHoje.RCL.Data
+@inject NavigationManager Navigation
+@inject UserService UserService
+@implements IAsyncDisposable
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">QueVistoHoje</a>
+
     </div>
 </div>
 
@@ -10,17 +16,73 @@
     <nav>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                <span class="home-icon"></span> Home
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="search">
-                <span class="bi bi-search" aria-hidden="true"></span> Pesquisar
+                <span class="search-icon"></span> Pesquisar
             </NavLink>
         </div>
 
+        @if (string.IsNullOrEmpty(UserService.Token.ToString()))
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="login">
+                    <span class="login-icon"></span> Iniciar sessão
+                </NavLink>
+            </div>
 
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="register">
+                    <span class="register-icon"></span> Registar
+                </NavLink>
+            </div>
+        }
+        else
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link shop-cart-link" href="carrinho">
+                    <span class="shop-cart-icon"></span> Carrinho
+                </NavLink>
+            </div>
+
+            <div class="nav-item px-3">
+                <button class="nav-link btn" @onclick="LogOut">
+                    <span class="logout-icon"></span> Logout
+                </button>
+            </div>
+        }
     </nav>
+
+
 </div>
 
+@if (!string.IsNullOrEmpty(UserService.Nome.ToString()))
+{
+    <div class="welcome-message">
+        <div class="text-white d-flex align-items-center">
+            <span style="width: fit-content">Olá, <strong>@UserService.Nome</strong>!</span>
+        </div>
+    </div>
+}
+
+@code {
+    private async Task LogOut()
+    {
+        UserService.ClearUserData();
+        Navigation.NavigateTo("/");
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        UserService.UserChanged += StateHasChanged;
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        UserService.UserChanged -= StateHasChanged;
+    }
+}

@@ -1,0 +1,120 @@
+@page "/register"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<div class="register-container">
+    <div class="register-form">
+        <h1 class="register-title">QueVistoHoje</h1>
+
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" @bind="email" class="register-input" placeholder="Enter your email" />
+        </div>
+
+        <div class="input-group">
+            <label for="password">Palavra-passe:</label>
+            <input type="password" id="password" @bind="password" class="register-input" placeholder="Enter your password" />
+        </div>
+
+        <div class="input-group">
+            <label for="confirmPassword">Confirmar palavra-passe:</label>
+            <input type="password" id="confirmPassword" @bind="confirmPassword" class="register-input" placeholder="Confirm your password" />
+        </div>
+
+        <button class="register-button" @onclick="SignIn">Registar</button>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <ul class="error-messages">
+                @foreach (var error in FormatErrorMessages(errorMessage))
+                {
+                    <li>@error</li>
+                }
+            </ul>
+        }
+    </div>
+</div>
+
+
+@code {
+    private string email = string.Empty;
+    private string password = string.Empty;
+    private string confirmPassword = string.Empty;
+    private string errorMessage = string.Empty;
+
+    private async Task SignIn()
+    {
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
+        {
+            errorMessage = "All fields are required.";
+            return;
+        }
+
+        if (password != confirmPassword)
+        {
+            errorMessage = "Passwords do not match.";
+            return;
+        }
+
+        try
+        {
+            var registerData = new RegisterRequest
+                {
+                    Email = email,
+                    Password = password
+                };
+
+            var response = await Http.PostAsJsonAsync("https://d3q8hwmm-7119.uks1.devtunnels.ms/api/auth/register", registerData);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Navigation.NavigateTo("/login");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadFromJsonAsync<List<ApiError>>();
+
+                errorMessage = string.Empty;
+
+                if (errorContent != null && errorContent.Any())
+                {
+                    errorMessage = string.Join("<br/>", errorContent.Select(error => error.Description));
+                }
+                else
+                {
+                    errorMessage = "Registration failed. Please try again.";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred during registration.";
+            Console.WriteLine($"Registration error: {ex.Message}");
+        }
+    }
+
+    private class ApiError
+    {
+        public string Description { get; set; } = string.Empty;
+    }
+
+    private class RegisterRequest
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+
+    public static List<string> FormatErrorMessages(string errorMessage)
+    {
+        if (string.IsNullOrWhiteSpace(errorMessage))
+            return new List<string>();
+
+        // Split the error message by the <br/> tag
+        var errorLines = errorMessage.Split(new[] { "<br/>" }, StringSplitOptions.RemoveEmptyEntries);
+
+        // Trim each line and return as a list
+        return errorLines.Select(line => line.Trim()).ToList();
+    }
+
+
+}
