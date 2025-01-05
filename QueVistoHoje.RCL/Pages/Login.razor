@@ -53,10 +53,6 @@
                 {
 
                     UserService.SetUserData(email, result.Token);
-                    Console.WriteLine("UserService na Login Page Após sucesso de Login --------------");
-                    Console.WriteLine("--------------------------------------------------------------");
-                    Console.WriteLine("UserName: " + UserService.Nome.ToString());
-                    Console.WriteLine("Token: " + UserService.Token.ToString());
                     Navigation.NavigateTo("/");
                 }
             }

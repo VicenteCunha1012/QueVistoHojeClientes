@@ -5,8 +5,149 @@
 
 @inject NavigationManager Navigation
 @inject UserService UserService
+@inject HttpClient Http
 
-@if (string.IsNullOrEmpty(UserService.Token.ToString()))
+@if (string.IsNullOrEmpty(UserService.Token?.ToString()))
 {
     Navigation.NavigateTo("/");
 }
+else
+{
+    <h3>Checkout</h3>
+
+    <EditForm Model="@encomenda" OnValidSubmit="FinalizarEncomenda">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="enderecoEntrega">Endereço de Entrega:</label>
+            <InputText id="enderecoEntrega" class="form-control" @bind-Value="encomenda.EnderecoEntrega" />
+        </div>
+
+        <div class="form-group">
+            <label for="metodoPagamento">Método de Pagamento:</label>
+            <InputSelect id="metodoPagamento" class="form-control" @bind-Value="encomenda.MetodoPagamento">
+                <option value="">Selecione...</option>
+                @foreach (MetodoPagamento metodo in Enum.GetValues(typeof(MetodoPagamento)))
+                {
+                    <option value="@metodo">@Encomenda.GetMetodoPagamentoString(metodo)</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div>
+            <h5>Produtos no Carrinho:</h5>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Nome</th>
+                        <th>Preço Unitário</th>
+                        <th>Quantidade</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var encomendaProduto in encomenda.EncomendaProdutos)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@encomendaProduto.Produto.Imagem" alt="@encomendaProduto.Produto.Nome" style="width: 100px; height: auto;" />
+                            </td>
+                            <td>@encomendaProduto.Produto.Nome</td>
+                            <td>@encomendaProduto.Produto.Preco</td>
+                            <td>@encomendaProduto.Quantidade</td>
+                            <td>@(encomendaProduto.Produto.Preco * encomendaProduto.Quantidade)</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-end"><strong>Total:</strong></td>
+                        <td>@encomenda.PrecoTotal</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+
+        <div>
+            <button class="btn btn-primary">Finalizar Encomenda</button>
+        </div>
+    </EditForm>
+}
+
+@code {
+    private Encomenda encomenda = new Encomenda();
+    private string errorMessage = string.Empty;
+
+
+    protected override void OnInitialized()
+    {
+        // Populate EncomendaProdutos from UserService.Carrinho
+        encomenda.EncomendaProdutos = UserService.Carrinho
+            .GroupBy(produto => produto.Id)
+            .Select(group => new EncomendaProduto
+                {
+                    Produto = group.First(),
+                    Quantidade = group.Count() // Count the number of times each product is added to the cart
+                })
+            .ToList();
+
+        // Calculate the total price of the order
+        encomenda.CalcularPrecoTotal();
+    }
+
+    private async Task FinalizarEncomenda()
+    {
+        // Assuming UserServices provides the token
+        var token = UserService.Token;
+
+        if (string.IsNullOrWhiteSpace(token))
+        {
+            errorMessage = "Token is required.";
+            return;
+        }
+
+        try
+        {
+
+            // Send the request to the API
+            var response = await Http.PostAsJsonAsync($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/encomenda?token={token}", encomenda);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Handle success (e.g., navigate to a success page or show a message)
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadFromJsonAsync<List<ApiError>>();
+
+                errorMessage = string.Empty;
+
+                if (errorContent != null && errorContent.Any())
+                {
+                    errorMessage = string.Join("<br/>", errorContent.Select(error => error.Description));
+                }
+                else
+                {
+                    errorMessage = "Failed to submit encomenda. Please try again.";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while finalizing the encomenda.";
+            Console.WriteLine($"Encomenda submission error: {ex.Message}");
+        }
+    }
+
+    private class ApiError
+    {
+        public string Description { get; set; } = string.Empty;
+    }
+
+}
+

@@ -76,6 +76,11 @@ body {
         background-color: #002855;
     }
 
+    .register-button:active {
+        background-color: rgba(0, 0, 0, 1);
+        transform: scale(0.98);
+    }
+
 .error-message {
     color: red;
     font-size: 14px;

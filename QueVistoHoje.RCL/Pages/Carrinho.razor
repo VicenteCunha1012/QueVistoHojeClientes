@@ -5,7 +5,8 @@
 @inject UserService UserService
 @inject NavigationManager Navigation
 
-@if (string.IsNullOrEmpty(UserService.Token.ToString())) {
+@if (string.IsNullOrEmpty(UserService.Token.ToString()))
+{
     Navigation.NavigateTo("/");
 }
 
@@ -41,9 +42,13 @@
     }
 </div>
 
-<div class="checkout-container">
-    <button class="checkout-button" @onclick="Checkout">Finalizar Compra</button>
-</div>
+@if (UserService.Carrinho != null && UserService.Carrinho.Count > 0)
+{
+    <div class="checkout-container">
+        <button class="checkout-button" @onclick="Checkout">Finalizar Compra</button>
+    </div>
+
+}
 
 @code {
     private void RemoveFromCart(int produtoId)
@@ -58,8 +63,8 @@
 
     private void Checkout()
     {
-        // Redirect to a checkout page or handle checkout logic
-        Navigation.NavigateTo("/checkout");
+        if (UserService.Carrinho != null && UserService.Carrinho.Count > 0)
+            Navigation.NavigateTo("/checkout");
     }
 }
 
