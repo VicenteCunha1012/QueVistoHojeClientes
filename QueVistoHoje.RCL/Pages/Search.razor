@@ -1,7 +1,15 @@
 @page "/search"
 
+<<<<<<< HEAD
+@using QueVistoHoje.RCL.Data
+@using QueVistoHoje.RCL.Data.Entities
+
+@inject HttpClient Http
+@inject APIService APIService
+=======
 @using QueVistoHoje.RCL.Data.Entities
 @inject HttpClient Http
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
 <div class="search-container">
     <input type="text" class="search-bar" @bind="searchQuery" placeholder="Search...">
@@ -29,6 +37,11 @@
 @code {
     private string searchQuery = string.Empty;
     private List<Produto> produtos = new List<Produto>();
+<<<<<<< HEAD
+    private string URL = APIService.Link + "/api/produtos/search?query=";
+
+=======
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
     private async Task SearchProducts()
     {
@@ -36,7 +49,11 @@
         {
             try
             {
+<<<<<<< HEAD
+                var searchUrl = $"{URL}{searchQuery}";
+=======
                 var searchUrl = $"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/search?query={searchQuery}";
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
                 produtos = await Http.GetFromJsonAsync<List<Produto>>(searchUrl);
             }
             catch (Exception ex)

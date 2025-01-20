@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.QueVistoHoje.MAUI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.QueVistoHoje.MAUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.QueVistoHoje.MAUI.props",
+      "PackagePath": "build\\QueVistoHoje.MAUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.QueVistoHoje.MAUI.props",
+      "PackagePath": "buildMultiTargeting\\QueVistoHoje.MAUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.QueVistoHoje.MAUI.props",
+      "PackagePath": "buildTransitive\\QueVistoHoje.MAUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

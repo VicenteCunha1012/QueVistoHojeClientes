@@ -2,9 +2,18 @@
 
 @using QueVistoHoje.RCL.Data
 @using QueVistoHoje.RCL.Data.Entities
+<<<<<<< HEAD
+@using System.Text.Json.Serialization;
+
 
 @inject NavigationManager Navigation
 @inject UserService UserService
+@inject APIService APIService
+=======
+
+@inject NavigationManager Navigation
+@inject UserService UserService
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 @inject HttpClient Http
 
 @if (string.IsNullOrEmpty(UserService.Token?.ToString()))
@@ -79,6 +88,30 @@ else
 }
 
 @code {
+<<<<<<< HEAD
+    private string URL = APIService.Link + "/api/encomendas/make";
+
+    private Encomenda encomenda = new Encomenda();
+    private string errorMessage = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        encomenda = new Encomenda
+            {
+                EnderecoEntrega = "", 
+                Data = DateTime.Now,
+                MetodoPagamento = MetodoPagamento.CARTAO_CREDITO_OU_DEBITO,
+                EncomendaProdutos = UserService.Carrinho
+                    .GroupBy(produto => produto.Id)
+                    .Select(group => new EncomendaProduto
+                    {
+                        Produto = group.First(),
+                        Quantidade = group.Count()
+                    })
+                    .ToList()
+            };
+
+=======
     private Encomenda encomenda = new Encomenda();
     private string errorMessage = string.Empty;
 
@@ -96,12 +129,16 @@ else
             .ToList();
 
         // Calculate the total price of the order
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
         encomenda.CalcularPrecoTotal();
     }
 
     private async Task FinalizarEncomenda()
     {
+<<<<<<< HEAD
+=======
         // Assuming UserServices provides the token
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
         var token = UserService.Token;
 
         if (string.IsNullOrWhiteSpace(token))
@@ -112,6 +149,20 @@ else
 
         try
         {
+<<<<<<< HEAD
+            var encomendaRequest = new EncomendaRequest
+                {
+                    TokenRequest = token,
+                    Encomenda = encomenda
+                };
+
+            var response = await Http.PostAsJsonAsync(URL, encomendaRequest);
+
+            Console.WriteLine($"Response: {response.StatusCode}");
+
+            if (response.IsSuccessStatusCode)
+            {
+=======
 
             // Send the request to the API
             var response = await Http.PostAsJsonAsync($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/encomenda?token={token}", encomenda);
@@ -119,10 +170,18 @@ else
             if (response.IsSuccessStatusCode)
             {
                 // Handle success (e.g., navigate to a success page or show a message)
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
                 Navigation.NavigateTo("/");
             }
             else
             {
+<<<<<<< HEAD
+                var responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Response Content: {responseContent}");
+
+                var errorResponse = await response.Content.ReadFromJsonAsync<ApiError>();
+                errorMessage = errorResponse?.Description ?? "Failed to submit encomenda. Please try again.";
+=======
                 var errorContent = await response.Content.ReadFromJsonAsync<List<ApiError>>();
 
                 errorMessage = string.Empty;
@@ -135,6 +194,7 @@ else
                 {
                     errorMessage = "Failed to submit encomenda. Please try again.";
                 }
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
             }
         }
         catch (Exception ex)
@@ -146,7 +206,26 @@ else
 
     private class ApiError
     {
+<<<<<<< HEAD
+        [JsonPropertyName("Message")]
         public string Description { get; set; } = string.Empty;
+
+        [JsonPropertyName("Detalhes")]
+        public string? Details { get; set; }
+    }
+
+    public class EncomendaRequest
+    {
+        [JsonPropertyName("encomenda")]
+
+        public Encomenda Encomenda { get; set; }
+
+        [JsonPropertyName("tokenRequest")]
+
+        public string TokenRequest { get; set; }
+=======
+        public string Description { get; set; } = string.Empty;
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
     }
 
 }

@@ -14,6 +14,10 @@ namespace QueVistoHoje.MAUI {
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddHttpClient();
             builder.Services.AddSingleton<UserService>();
+<<<<<<< HEAD
+            builder.Services.AddSingleton<APIService>();
+=======
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();

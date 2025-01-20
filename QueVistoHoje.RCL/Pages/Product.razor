@@ -6,6 +6,10 @@
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject UserService UserService
+<<<<<<< HEAD
+@inject APIService APIService
+=======
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
 <div class="product-details-container">
     @if (product == null)
@@ -70,12 +74,25 @@
     private Produto? product;
     private Empresa? empresa;
 
+<<<<<<< HEAD
+    private string URL_produto = APIService.Link + $"/api/produtos/";
+    private string URL_empresa = APIService.Link + $"/api/empresas/";
+
+=======
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
     protected override async Task OnInitializedAsync()
     {
         try
         {
+<<<<<<< HEAD
+            product = await Http.GetFromJsonAsync<Produto>($"{URL_produto}{Id}");
+            empresa = await Http.GetFromJsonAsync<Empresa>($"{URL_empresa}{product.EmpresaId}");
+
+            product.Empresa = empresa;
+=======
             product = await Http.GetFromJsonAsync<Produto>($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/{Id}");
             empresa = await Http.GetFromJsonAsync<Empresa>($"https://d3q8hwmm-7119.uks1.devtunnels.ms/api/empresas/{product.EmpresaId}");
+>>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
             Console.WriteLine($"Product Empresa Name:" + product.Empresa.Nome);
 
