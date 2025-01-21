@@ -4,13 +4,25 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"961"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00221zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Dec 2024 02:26:43 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"961"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00221zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Jan 2025 11:38:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="index.l1rp67z8hx.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l1rp67z8hx"},{"Name":"integrity","Value":"sha256-1zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"961"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00221zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Dec 2024 02:26:43 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"961"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00221zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Jan 2025 11:38:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="QueVistoHoje.MAUI.mw6f9rinii.styles.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QueVistoHoje.MAUI.styles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mw6f9rinii"},{"Name":"integrity","Value":"sha256-tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ="},{"Name":"label","Value":"QueVistoHoje.MAUI.styles.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Jan 2025 12:48:17 GMT"},{"Name":"Link","Value":"\u003C_content/QueVistoHoje.RCL/QueVistoHoje.RCL.i9rhhsi3ia.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="QueVistoHoje.MAUI.styles.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QueVistoHoje.MAUI.styles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 21 Jan 2025 12:48:17 GMT"},{"Name":"Link","Value":"\u003C_content/QueVistoHoje.RCL/QueVistoHoje.RCL.i9rhhsi3ia.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

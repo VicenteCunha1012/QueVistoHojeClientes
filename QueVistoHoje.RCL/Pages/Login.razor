@@ -31,11 +31,8 @@
     private string password = string.Empty;
     private string errorMessage = string.Empty;
 
-<<<<<<< HEAD
     private string URL = APIService.Link + "/api/auth/login";
 
-=======
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
     private async Task Log_in()
     {
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
@@ -49,11 +46,7 @@
             var base64Credentials = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes($"{email}:{password}"));
             Http.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64Credentials);
 
-<<<<<<< HEAD
             var response = await Http.PostAsync(URL, null);
-=======
-            var response = await Http.PostAsync("https://d3q8hwmm-7119.uks1.devtunnels.ms/api/auth/login", null);
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
             if (response.IsSuccessStatusCode)
             {

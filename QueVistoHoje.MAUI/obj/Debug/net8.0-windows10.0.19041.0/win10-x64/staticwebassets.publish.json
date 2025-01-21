@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "5EoGDq+/YpkRiHmCey4Q/iXcLP4fwiopItqp+Fbfn60=",
+  "Hash": "LRwQLlskgOMTviPWaPRqdazthB5yNpLGOQRRl7L92/Y=",
   "Source": "QueVistoHoje.MAUI",
   "BasePath": "/",
   "Mode": "Root",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
       "Version": 2,
       "Source": "QueVistoHoje.RCL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,17 @@
     {
       "Name": "QueVistoHoje.MAUI\\wwwroot",
       "Source": "QueVistoHoje.MAUI",
-      "ContentRoot": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "SourceId": "QueVistoHoje.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -53,7 +53,7 @@
   "Endpoints": [
     {
       "Route": "index.html",
-      "AssetFile": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Dec 2024 02:26:43 GMT"
+          "Value": "Tue, 21 Jan 2025 11:38:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -90,7 +90,7 @@
     },
     {
       "Route": "index.l1rp67z8hx.html",
-      "AssetFile": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -111,7 +111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Dec 2024 02:26:43 GMT"
+          "Value": "Tue, 21 Jan 2025 11:38:11 GMT"
         },
         {
           "Name": "Cache-Control",

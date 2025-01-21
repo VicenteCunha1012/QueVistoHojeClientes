@@ -1,2 +1,3 @@
-D:\Escola\Projetos\QuevistoHoje - C#\Clientes\QueVistoHoje.RCL\obj\Debug\net8.0\staticwebassets.build.json
-D:\Escola\Projetos\QuevistoHoje - C#\Clientes\QueVistoHoje.RCL\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\joaoa\Desktop\TP_PWEB\Clientes\QueVistoHoje.RCL\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\joaoa\Desktop\TP_PWEB\Clientes\QueVistoHoje.RCL\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\joaoa\Desktop\TP_PWEB\Clientes\QueVistoHoje.RCL\obj\Debug\net8.0\staticwebassets.build.json

@@ -724,23 +724,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joao Almas\\.nuget\\packages\\": {},
+    "C:\\Users\\joaoa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
+      "projectUniqueName": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
       "projectName": "QueVistoHoje.RCL",
-      "projectPath": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
-      "packagesPath": "C:\\Users\\Joao Almas\\.nuget\\packages\\",
-      "outputPath": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.RCL\\obj\\",
+      "projectPath": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
+      "packagesPath": "C:\\Users\\joaoa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Joao Almas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -799,7 +799,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

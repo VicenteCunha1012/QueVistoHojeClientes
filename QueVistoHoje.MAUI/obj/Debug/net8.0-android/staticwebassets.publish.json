@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "5EoGDq+/YpkRiHmCey4Q/iXcLP4fwiopItqp+Fbfn60=",
+  "Hash": "U17JMaZSPfT4HzwEvoFhNnIvGxyW20EfFAAGTb025wk=",
   "Source": "QueVistoHoje.MAUI",
   "BasePath": "/",
   "Mode": "Root",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\QueVistoHoje.RCL.csproj",
       "Version": 2,
       "Source": "QueVistoHoje.RCL",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,45 @@
     {
       "Name": "QueVistoHoje.MAUI\\wwwroot",
       "Source": "QueVistoHoje.MAUI",
-      "ContentRoot": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
       "BasePath": "/",
+      "Pattern": "**"
+    },
+    {
+      "Name": "QueVistoHoje.RCL\\wwwroot",
+      "Source": "QueVistoHoje.RCL",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\QueVistoHoje.MAUI.styles.css",
+      "SourceId": "QueVistoHoje.MAUI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\",
+      "BasePath": "/",
+      "RelativePath": "QueVistoHoje.MAUI#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "mw6f9rinii",
+      "Integrity": "tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\QueVistoHoje.MAUI.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "SourceId": "QueVistoHoje.MAUI",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -48,12 +76,527 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QueVistoHoje.RCL.bundle.scp.css",
+      "SourceId": "QueVistoHoje.RCL",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
+      "RelativePath": "QueVistoHoje.RCL#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "i9rhhsi3ia",
+      "Integrity": "utqh+G7rQTGUfqc4NYSeCgFROfcREOHyeM9fjKqdRcw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QueVistoHoje.RCL.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\app.css",
+      "SourceId": "QueVistoHoje.RCL",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "QueVistoHoje.RCL",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "QueVistoHoje.RCL",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\favicon.png",
+      "SourceId": "QueVistoHoje.RCL",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\",
+      "BasePath": "_content/QueVistoHoje.RCL",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\favicon.png"
     }
   ],
   "Endpoints": [
     {
+      "Route": "_content/QueVistoHoje.RCL/app.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/app.da95v2qkru.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/QueVistoHoje.RCL/app.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.css.map"
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/QueVistoHoje.RCL/favicon.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/favicon.png",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:38:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/QueVistoHoje.RCL.bundle.scp.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QueVistoHoje.RCL.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"utqh+G7rQTGUfqc4NYSeCgFROfcREOHyeM9fjKqdRcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:43:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-utqh+G7rQTGUfqc4NYSeCgFROfcREOHyeM9fjKqdRcw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/QueVistoHoje.RCL/QueVistoHoje.RCL.i9rhhsi3ia.bundle.scp.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.RCL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QueVistoHoje.RCL.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28950"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"utqh+G7rQTGUfqc4NYSeCgFROfcREOHyeM9fjKqdRcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 11:43:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i9rhhsi3ia"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-utqh+G7rQTGUfqc4NYSeCgFROfcREOHyeM9fjKqdRcw="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/QueVistoHoje.RCL/QueVistoHoje.RCL.bundle.scp.css"
+        }
+      ]
+    },
+    {
       "Route": "index.html",
-      "AssetFile": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -74,7 +617,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Dec 2024 02:26:43 GMT"
+          "Value": "Tue, 21 Jan 2025 11:38:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -90,7 +633,7 @@
     },
     {
       "Route": "index.l1rp67z8hx.html",
-      "AssetFile": "D:\\Escola\\Projetos\\QuevistoHoje - C#\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -111,7 +654,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Dec 2024 02:26:43 GMT"
+          "Value": "Tue, 21 Jan 2025 11:38:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -130,6 +673,96 @@
         {
           "Name": "integrity",
           "Value": "sha256-1zgj74Nf1f6/ZkNytrSQAwn08m8dCaFvdCpZhgOILtU="
+        }
+      ]
+    },
+    {
+      "Route": "QueVistoHoje.MAUI.mw6f9rinii.styles.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\QueVistoHoje.MAUI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 12:48:17 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/QueVistoHoje.RCL/QueVistoHoje.RCL.i9rhhsi3ia.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mw6f9rinii"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ="
+        },
+        {
+          "Name": "label",
+          "Value": "QueVistoHoje.MAUI.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "QueVistoHoje.MAUI.styles.css",
+      "AssetFile": "C:\\Users\\joaoa\\Desktop\\TP_PWEB\\Clientes\\QueVistoHoje.MAUI\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\QueVistoHoje.MAUI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 12:48:17 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/QueVistoHoje.RCL/QueVistoHoje.RCL.i9rhhsi3ia.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tqVhLArovGkWzErwLgdP/zhD2H5c4Q8XrfzKSp08UnQ="
         }
       ]
     }

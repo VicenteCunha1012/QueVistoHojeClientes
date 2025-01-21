@@ -1,15 +1,10 @@
 @page "/register"
-<<<<<<< HEAD
 
 @using QueVistoHoje.RCL.Data
 
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject APIService APIService
-=======
-@inject HttpClient Http
-@inject NavigationManager Navigation
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
 <div class="register-container">
     <div class="register-form">
@@ -51,12 +46,9 @@
     private string confirmPassword = string.Empty;
     private string errorMessage = string.Empty;
 
-<<<<<<< HEAD
     private string URL = APIService.Link + "/api/auth/register";
 
 
-=======
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
     private async Task SignIn()
     {
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
@@ -79,11 +71,7 @@
                     Password = password
                 };
 
-<<<<<<< HEAD
             var response = await Http.PostAsJsonAsync(URL, registerData);
-=======
-            var response = await Http.PostAsJsonAsync("https://d3q8hwmm-7119.uks1.devtunnels.ms/api/auth/register", registerData);
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
             if (response.IsSuccessStatusCode)
             {
@@ -128,15 +116,8 @@
         if (string.IsNullOrWhiteSpace(errorMessage))
             return new List<string>();
 
-<<<<<<< HEAD
         var errorLines = errorMessage.Split(new[] { "<br/>" }, StringSplitOptions.RemoveEmptyEntries);
 
-=======
-        // Split the error message by the <br/> tag
-        var errorLines = errorMessage.Split(new[] { "<br/>" }, StringSplitOptions.RemoveEmptyEntries);
-
-        // Trim each line and return as a list
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
         return errorLines.Select(line => line.Trim()).ToList();
     }
 

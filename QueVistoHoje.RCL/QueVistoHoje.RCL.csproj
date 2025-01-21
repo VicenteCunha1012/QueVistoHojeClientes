@@ -6,17 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-<<<<<<< HEAD
-=======
-  <ItemGroup>
-    <Content Remove="Pages\Encomendas.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Pages\Encomendas.razor" />
-  </ItemGroup>
-
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -24,10 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.10" />
-<<<<<<< HEAD
     <PackageReference Include="System.Text.Json" Version="9.0.0" />
-=======
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
   </ItemGroup>
 
 </Project>

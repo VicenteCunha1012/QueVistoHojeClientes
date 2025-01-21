@@ -1,15 +1,10 @@
 ﻿@page "/"
 
-<<<<<<< HEAD
 @using QueVistoHoje.RCL.Data
 @using QueVistoHoje.RCL.Data.Entities
 
 @inject HttpClient Http
 @inject APIService APIService
-=======
-@using QueVistoHoje.RCL.Data.Entities
-@inject HttpClient Http
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
 
 <div class="title-container">
     <div class="carousel-title">
@@ -45,22 +40,15 @@
     private int currentIndex = 0;
     private bool IsSingleImage => produtos.Count <= 1;
 
-<<<<<<< HEAD
     private string URL = APIService.Link + "/api/produtos/";
 
 
-=======
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
     protected override async Task OnInitializedAsync()
     {
         try
         {
-<<<<<<< HEAD
             Console.WriteLine(URL);
             produtos = await Http.GetFromJsonAsync<List<Produto>>(URL);
-=======
-            produtos = await Http.GetFromJsonAsync<List<Produto>>("https://d3q8hwmm-7119.uks1.devtunnels.ms/api/produtos/");
->>>>>>> 817da96e6c7472d81c14db231778c170d33ecb80
         }
         catch (Exception ex)
         {

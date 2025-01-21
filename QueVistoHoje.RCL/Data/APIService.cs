@@ -7,7 +7,7 @@ using static System.Net.WebRequestMethods;
 
 namespace QueVistoHoje.RCL.Data {
     public class APIService {
-       static public string Link { get; set; } = "https://d3q8hwmm-7119.uks1.devtunnels.ms";
+       static public string Link { get; set; } = "https://4jbv4vmr-7119.uks1.devtunnels.ms";
 
     }
 }
